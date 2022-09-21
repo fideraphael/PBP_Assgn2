@@ -1,17 +1,7 @@
-[Heroku Catalog App](https://catalog-assignment2.herokuapp.com/katalog/)
-1. Models --> Views --> urls -->HTML
-2. A virtual environment is used to execute the django application. It is also used to manage
-	python packages for different projects so python doesnt download a package globally and
-	clash with other projects. Yes you can create a django app without venv but it is not recommended to do so.
-3. I finished and copied the steps from lab 1
-	the steps are as followed:
-		-copy the template repo
-		-initializ a virtual environment and run it
-		-install the requirement with pi
-		-made migrations then loaded the catalog data
-		-added several lines to the HTML used for iterating the catalog data
-		-made a function on views to render to an HTML, imported the catalog from models, and added context and
-			catalog items to the function
-		-routed the views function in urls
-		-added,commited, and pushed all changes to github
-		-made a new app on heroku, added the api key and app name to github secrets, deployed the app.
+[Heroku Watchlist App](https://pbdassignment3.herokuapp.com/mywatchlist/html/)
+1.	-JSON (JavaScript Object Notation) is a lightweight data-interchange format and it completely language independent. It is based on the JavaScript programming language and easy to understand and generate.
+	-XML (Extensible markup language) defines a set of rules for encoding documents in a format that is both human-readable and machine-readable made with simplicity in mind.
+	-HTML (Hypertext Markup Language) is a language that is used to create the structure and content of web pages. It is typically used in conjunction with CSS (Cascading Style Sheets) to style the page, and JavaScript to add interactivity.
+
+	○JSON & XML are data storage formats while HTML is used to show these data as web pages.
+2.[Postman screenshots](https://drive.google.com/drive/folders/1HpWbvgG0u-7E3A4qQguA7ydkpA9TKzqv?usp=sharing)
