@@ -1,0 +1,113 @@
+[
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 1,
+        "fields": {
+            "watched": "Yes",
+            "title": "Tron: Legacy",
+            "rating": 9.6,
+            "release_date": "2010-12-17",
+            "review": "Favorite movie of all time"
+           
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 2,
+        "fields": {
+            "watched": "Yes",
+            "title": "Ford v Ferrari",
+            "rating": 8.7,
+            "release_date": "2019-11-15",
+            "review": "Great movie with exciting race scenes"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 3,
+        "fields": {
+            "watched": "No",
+            "title": "Cyberpunk: Edgerunners",
+            "rating": 8.8,
+            "release_date": "2022-09-13",
+            "review": "I've only seen the first episode and so far it has been pretty fun"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 4,
+        "fields": {
+            "watched": "Yes",
+            "title": "Inglourious Basterdsy",
+            "rating": 9.3,
+            "release_date": "2009-10-16",
+            "review": "I really liked Christoph Waltz's performance in this movie as he acted his part as a villain perfectly"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 5,
+        "fields": {
+            "watched": "Yes",
+            "title": "1917",
+            "rating": 8.7,
+            "release_date": "2020-01-18",
+            "review": "Great war movie that shows you the horrors of war yet brings out the beauty of patriotism"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 6,
+        "fields": {
+            "watched": "Yes",
+            "title": "Moon Knight",
+            "rating": 8,
+            "release_date": "2022-03-30",
+            "review": "Fun TV show and great performance by Oscar Isaac although the ending was abit of a let down"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 7,
+        "fields": {
+            "watched": "Yes",
+            "title": "American Psycho",
+            "rating": 11,
+            "release_date": "2000-04-14",
+            "review": "He is literally me"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 8,
+        "fields": {
+            "watched": "Yes",
+            "title": "The Mandalorian",
+            "rating": 8.8,
+            "release_date": "2019-11-12",
+            "review": "Great TV show. Really refreshing to see a wild west themed movie but with futuristic star wars atmosphere"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 9,
+        "fields": {
+            "watched": "Yes",
+            "title": "The Magnificent Seven",
+            "rating": 7.8,
+            "release_date": "2016-09-21",
+            "review": "Another fun wild west movie although the whole plot is a bit uninteresting, the characters are great"
+        }
+    },
+    {
+        "model": "mywatchlist.WatchListItem",
+        "pk": 10,
+        "fields": {
+            "watched": "Yes",
+            "title": "Love, Death & Robots",
+            "rating": 9.4,
+            "release_date": "2019-03-15",
+            "review": "A really good anthology series. Simply magnificent"
+        }
+    }
+]

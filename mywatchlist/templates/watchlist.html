@@ -2,7 +2,7 @@
 
  {% block content %}
 
-  <h1>Lab 1 Assignment PBP/PBD</h1>
+  <h1>Assignment 3 PBP/PBD</h1>
 
   <h5>Name: </h5>
   <p>{{name}}</p>
@@ -12,22 +12,20 @@
 
   <table>
     <tr>
-      <th>Item Name</th>
-      <th>Item Price</th>
-      <th>Item Stock</th>
+      <th>Watch Status</th>
+      <th>Title</th>
       <th>Rating</th>
-      <th>Description</th>
-      <th>Item URL</th>
+      <th>Release Date</th>
+      <th>Review</th>
     </tr>
     {% comment %} Add the data below this line {% endcomment %}
     {% for item in list_item %}
     <tr>
-        <td>{{item.item_name}}</td>
-        <td>{{item.item_price}}</td>
-        <td>{{item.description}}</td>
-        <td>{{item.item_stock}}</td>
+        <td>{{item.watched}}</td>
+        <td>{{item.title}}</td>
         <td>{{item.rating}}</td>
-        <td>{{item.item_url}}</td>
+        <td>{{item.release_date}}</td>
+        <td>{{item.review}}</td>
     </tr>
     {% endfor %}
   </table>
