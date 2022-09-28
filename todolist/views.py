@@ -70,7 +70,3 @@ def my_form(request):
       last_user.save()
       return redirect('todolist:show_todolist')
   return render(request, 'cv-form.html', {'form': form})
-
-
-
-# Create your views here.
