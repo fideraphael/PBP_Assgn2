@@ -1,10 +1,10 @@
-<div class="container">
+{% extends 'base.html' %}
+{% block content %}
+<div style="margin-left:-1px;" class="container">
     <form method="POST">
-      <fieldset>
-        <legend>Form</legend>
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </fieldset>
+        <button type="submit" class="btn btn-secondary">Submit</button>
     </form>
 </div>
+{% endblock content %}
