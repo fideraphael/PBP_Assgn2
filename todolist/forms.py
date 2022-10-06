@@ -1,8 +1,20 @@
 from django import forms
-from todolist.models import Task
+from .models import Task
+from django.forms import TextInput
 
 class TaskForms(forms.ModelForm):
     class Meta:
         model = Task
         fields=["title","description",]
-        labels = {'title':"Task Title",'description':"Task Description",}
+        widgets = {
+            'title':TextInput(attrs={
+                'class':'form-control',
+                'style':'max-width:300px',
+                'placeholder':'Task Title'
+                }), 
+            'description':TextInput(attrs={
+                'class':'form-control',
+                'style':'max-width:300px',
+                'placeholder':'Description'
+                })
+        }
