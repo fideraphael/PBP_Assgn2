@@ -1,6 +1,57 @@
 {% extends 'base.html' %}
-
 {% block content %}
+<script>
+  $(document).ready(function() {
+      function card(task) {
+          return `
+          <div class="row row-cols-1 row-cols-md-5 g-4">
+                <div class="col">
+                  <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+                      <div class="card-header">{{item.user}}</div>
+                      <div class="card-body">
+                          <h5 class="card-title">{{item.title}}</h5>
+                          <h6 class="card-text">{{item.date}}</h6>
+                          <p class="card-text">{{item.description}}</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          `
+        }
+      };
+      function loop() {
+        $.get("{% url 'todolist:show_json' %}", function(data) {
+            $.each(data, function(i, value) {
+                $("#container0").append(card(value));
+            });
+        });
+    };
+    $("#submitbutton").click(e => {
+      e.preventDefault();
+      const csrftoken = document.querySelector(
+        "[name=csrfmiddlewaretoken]"
+      ).value;
+      $.ajax({
+          type: "POST",
+          url: "{% url 'todolist:add' %}",
+          headers: { "X-CSRFToken": csrftoken },
+          mode: "same-origin",
+          data: {
+            title: $("#titletext").val(),
+            description: $("#descriptiontext").val(),
+          },
+          success: response => {
+            $("#modalform").trigger("reset");
+            $("#container0").prepend(card(response));
+          },
+          error: error => {
+            console.log(error);
+          },
+        });
+    });
+    loop();
+})
+</script>
 <style>
     a {
         text-decoration: none;

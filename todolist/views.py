@@ -12,6 +12,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
 
 @login_required(login_url='/todolist/login/')
 
@@ -70,3 +71,33 @@ def my_form(request):
       last_user.save()
       return redirect('todolist:show_todolist')
   return render(request, 'cv-form.html', {'form': form})
+
+@login_required(login_url="/todolist/login/")
+def show_json(request):
+    task = Task.objects.filter(user=request.user)
+    return HttpResponse(
+        serializers.serialize("json", task), content_type="application/json"
+    )
+
+def add_task(request):
+    if request.method == "POST":
+        title = request.POST.get("title")
+        description = request.POST.get("description")
+        task = Task.objects.create(
+            user=request.user,
+            title=title,
+            description=description,
+            date=datetime.datetime.today(),
+        )
+        return JsonResponse(
+            {
+                "pk": task.id,
+                "fields": {
+                    "title": task.title,
+                    "description": task.description,
+                    "is_finished": task.is_finished,
+                    "date": task.date,
+                },
+            },
+            status=200,
+        )
