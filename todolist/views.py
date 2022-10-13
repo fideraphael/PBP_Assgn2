@@ -21,7 +21,6 @@ def show_todolist(request):
     current_user = request.user.username
     context = {
         'list_item': data_todolist_item,
-        'last_login': request.COOKIES['last_login'],
         'user':current_user,
     }
     return render(request, "todolist.html",context)
@@ -95,7 +94,6 @@ def add_task(request):
                 "fields": {
                     "title": task.title,
                     "description": task.description,
-                    "is_finished": task.is_finished,
                     "date": task.date,
                 },
             },
