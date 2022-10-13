@@ -11,4 +11,4 @@
 	f) JavaScript executes an action based on said response, which is based on a triggering event.
 	The entire process does not require a page reload, though it may contain it if defined by the programmer.
 
-	4. i dont know how to implement ajax and my modal is still broken
+	4. i first added urls and views on add_task and show json then i added the ajax and modal on todolist.html by making a new card function to show the tasks, add a loop to append the new tasks and show the json, add a submit button to create a new task,then added a modal for the create new task
